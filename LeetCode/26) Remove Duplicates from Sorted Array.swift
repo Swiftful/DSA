@@ -2,6 +2,15 @@
 //  Untitled.swift
 //  DSA
 //
-//  Created by Xose on 17.09.25.
-//
 
+class Solution {
+    func removeDuplicates(_ nums: inout [Int]) -> Int {
+        let arr = Set(nums)
+        nums = []
+        for i in arr{
+            nums.append(i)
+        }
+        nums.sort()
+        return nums.count
+    }
+}
